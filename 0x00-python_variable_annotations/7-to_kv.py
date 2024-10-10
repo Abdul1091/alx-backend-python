@@ -2,10 +2,11 @@
 """ Complex types - string and int/float to tuple """
 
 
-from typing import List, Union
+from typing import Union, Tuple
 
 
-def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
-    '''Computes the sum of a list of integers and floating-point numbers.
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
+    '''Converts a key and its value to a tuple of the key and
+    the square of its value.
     '''
-    return float(sum(mxd_lst))
+    return (k, float(v**2))
